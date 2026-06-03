@@ -1,0 +1,32 @@
+\doxysection{rational.\+h}
+\hypertarget{rational_8h_source}{}\label{rational_8h_source}\index{include/rational.h@{include/rational.h}}
+\mbox{\hyperlink{rational_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RATIONAL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RATIONAL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ac0ca5fbd98ec8dc2663ba55be7329589}{RATIONAL\_OK}}\ =\ 0,}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630af312fa8f1e625aea03308548115ec78b}{RATIONAL\_ERROR\_NULL}},}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ae339507cacf5e2b2494c0389ab6d861d}{RATIONAL\_ERROR\_DIV\_ZERO}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ad4ec3bf0f7c6812f7ab9a47ec320d087}{RATIONAL\_ERROR\_INVALID\_DENOM}}}
+\DoxyCodeLine{00009\ \}\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structrational__t_a84e19f7d18820dddcb9e9d8e543fb03e}{numerator}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{structrational__t_a7dae38f82379964a7ad5d5e5f6daa4d5}{denominator}};}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{structrational__t}{rational\_t}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_a080404ecbe733e1203ee23f650910719}{rational\_create}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ num,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ den,\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *result);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rational_8h_ac4f7fb8349e92b8951ebbd89d4f01796}{rational\_free}}(\mbox{\hyperlink{structrational__t}{rational\_t}}\ *r);}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_a3524cea2e099843e645ca603d518e17b}{rational\_normalize}}(\mbox{\hyperlink{structrational__t}{rational\_t}}\ *r);}
+\DoxyCodeLine{00019\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_a55934efa9a0edc95e3c3b814288c30f2}{rational\_add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *b,\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *result);}
+\DoxyCodeLine{00020\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_abc29b3f2f24687bfaa4df4f6eca41e5f}{rational\_sub}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *b,\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *result);}
+\DoxyCodeLine{00021\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_afe0e718b1a96577eadebd953621ab7c9}{rational\_mul}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *b,\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *result);}
+\DoxyCodeLine{00022\ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\_error\_t}}\ \mbox{\hyperlink{rational_8h_abb4b88520f02bed70478fa74121152e4}{rational\_div}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *b,\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *result);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{rational_8h_abc51ef5fd680f6656328935bb1e521be}{rational\_cmp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *b);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{rational_8h_a94e6755695fd54e9b661fa8a77df367d}{rational\_to\_double}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structrational__t}{rational\_t}}\ *r);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

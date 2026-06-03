@@ -1,0 +1,121 @@
+\doxysection{include/rational.h File Reference}
+\hypertarget{rational_8h}{}\label{rational_8h}\index{include/rational.h@{include/rational.h}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrational__t}{rational\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \{ \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ac0ca5fbd98ec8dc2663ba55be7329589}{RATIONAL\+\_\+\+OK}} = 0
+, \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630af312fa8f1e625aea03308548115ec78b}{RATIONAL\+\_\+\+ERROR\+\_\+\+NULL}}
+, \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ae339507cacf5e2b2494c0389ab6d861d}{RATIONAL\+\_\+\+ERROR\+\_\+\+DIV\+\_\+\+ZERO}}
+, \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630ad4ec3bf0f7c6812f7ab9a47ec320d087}{RATIONAL\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DENOM}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_a080404ecbe733e1203ee23f650910719}{rational\+\_\+create}} (long long num, long long den, \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}result)
+\item 
+void \mbox{\hyperlink{rational_8h_ac4f7fb8349e92b8951ebbd89d4f01796}{rational\+\_\+free}} (\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}r)
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_a3524cea2e099843e645ca603d518e17b}{rational\+\_\+normalize}} (\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}r)
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_a55934efa9a0edc95e3c3b814288c30f2}{rational\+\_\+add}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}result)
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_abc29b3f2f24687bfaa4df4f6eca41e5f}{rational\+\_\+sub}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}result)
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_afe0e718b1a96577eadebd953621ab7c9}{rational\+\_\+mul}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}result)
+\item 
+\mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} \mbox{\hyperlink{rational_8h_abb4b88520f02bed70478fa74121152e4}{rational\+\_\+div}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}result)
+\item 
+int \mbox{\hyperlink{rational_8h_abc51ef5fd680f6656328935bb1e521be}{rational\+\_\+cmp}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}b)
+\item 
+double \mbox{\hyperlink{rational_8h_a94e6755695fd54e9b661fa8a77df367d}{rational\+\_\+to\+\_\+double}} (const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{rational_8h_af4429899a3e054e6376e037a607de630}\label{rational_8h_af4429899a3e054e6376e037a607de630} 
+\index{rational.h@{rational.h}!rational\_error\_t@{rational\_error\_t}}
+\index{rational\_error\_t@{rational\_error\_t}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_error\_t}{rational\_error\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RATIONAL\_OK@{RATIONAL\_OK}!rational.h@{rational.h}}\index{rational.h@{rational.h}!RATIONAL\_OK@{RATIONAL\_OK}}}\Hypertarget{rational_8h_af4429899a3e054e6376e037a607de630ac0ca5fbd98ec8dc2663ba55be7329589}\label{rational_8h_af4429899a3e054e6376e037a607de630ac0ca5fbd98ec8dc2663ba55be7329589} 
+RATIONAL\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RATIONAL\_ERROR\_NULL@{RATIONAL\_ERROR\_NULL}!rational.h@{rational.h}}\index{rational.h@{rational.h}!RATIONAL\_ERROR\_NULL@{RATIONAL\_ERROR\_NULL}}}\Hypertarget{rational_8h_af4429899a3e054e6376e037a607de630af312fa8f1e625aea03308548115ec78b}\label{rational_8h_af4429899a3e054e6376e037a607de630af312fa8f1e625aea03308548115ec78b} 
+RATIONAL\+\_\+\+ERROR\+\_\+\+NULL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RATIONAL\_ERROR\_DIV\_ZERO@{RATIONAL\_ERROR\_DIV\_ZERO}!rational.h@{rational.h}}\index{rational.h@{rational.h}!RATIONAL\_ERROR\_DIV\_ZERO@{RATIONAL\_ERROR\_DIV\_ZERO}}}\Hypertarget{rational_8h_af4429899a3e054e6376e037a607de630ae339507cacf5e2b2494c0389ab6d861d}\label{rational_8h_af4429899a3e054e6376e037a607de630ae339507cacf5e2b2494c0389ab6d861d} 
+RATIONAL\+\_\+\+ERROR\+\_\+\+DIV\+\_\+\+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RATIONAL\_ERROR\_INVALID\_DENOM@{RATIONAL\_ERROR\_INVALID\_DENOM}!rational.h@{rational.h}}\index{rational.h@{rational.h}!RATIONAL\_ERROR\_INVALID\_DENOM@{RATIONAL\_ERROR\_INVALID\_DENOM}}}\Hypertarget{rational_8h_af4429899a3e054e6376e037a607de630ad4ec3bf0f7c6812f7ab9a47ec320d087}\label{rational_8h_af4429899a3e054e6376e037a607de630ad4ec3bf0f7c6812f7ab9a47ec320d087} 
+RATIONAL\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+DENOM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rational_8h_a55934efa9a0edc95e3c3b814288c30f2}\label{rational_8h_a55934efa9a0edc95e3c3b814288c30f2} 
+\index{rational.h@{rational.h}!rational\_add@{rational\_add}}
+\index{rational\_add@{rational\_add}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_add()}{rational\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_abc51ef5fd680f6656328935bb1e521be}\label{rational_8h_abc51ef5fd680f6656328935bb1e521be} 
+\index{rational.h@{rational.h}!rational\_cmp@{rational\_cmp}}
+\index{rational\_cmp@{rational\_cmp}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_cmp()}{rational\_cmp()}}
+{\footnotesize\ttfamily int rational\+\_\+cmp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_a080404ecbe733e1203ee23f650910719}\label{rational_8h_a080404ecbe733e1203ee23f650910719} 
+\index{rational.h@{rational.h}!rational\_create@{rational\_create}}
+\index{rational\_create@{rational\_create}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_create()}{rational\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+create (\begin{DoxyParamCaption}\item[{long long}]{num,  }\item[{long long}]{den,  }\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_abb4b88520f02bed70478fa74121152e4}\label{rational_8h_abb4b88520f02bed70478fa74121152e4} 
+\index{rational.h@{rational.h}!rational\_div@{rational\_div}}
+\index{rational\_div@{rational\_div}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_div()}{rational\_div()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+div (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_ac4f7fb8349e92b8951ebbd89d4f01796}\label{rational_8h_ac4f7fb8349e92b8951ebbd89d4f01796} 
+\index{rational.h@{rational.h}!rational\_free@{rational\_free}}
+\index{rational\_free@{rational\_free}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_free()}{rational\_free()}}
+{\footnotesize\ttfamily void rational\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{r }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_afe0e718b1a96577eadebd953621ab7c9}\label{rational_8h_afe0e718b1a96577eadebd953621ab7c9} 
+\index{rational.h@{rational.h}!rational\_mul@{rational\_mul}}
+\index{rational\_mul@{rational\_mul}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_mul()}{rational\_mul()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+mul (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_a3524cea2e099843e645ca603d518e17b}\label{rational_8h_a3524cea2e099843e645ca603d518e17b} 
+\index{rational.h@{rational.h}!rational\_normalize@{rational\_normalize}}
+\index{rational\_normalize@{rational\_normalize}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_normalize()}{rational\_normalize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{r }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_abc29b3f2f24687bfaa4df4f6eca41e5f}\label{rational_8h_abc29b3f2f24687bfaa4df4f6eca41e5f} 
+\index{rational.h@{rational.h}!rational\_sub@{rational\_sub}}
+\index{rational\_sub@{rational\_sub}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_sub()}{rational\_sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rational_8h_af4429899a3e054e6376e037a607de630}{rational\+\_\+error\+\_\+t}} rational\+\_\+sub (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{b,  }\item[{\mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\Hypertarget{rational_8h_a94e6755695fd54e9b661fa8a77df367d}\label{rational_8h_a94e6755695fd54e9b661fa8a77df367d} 
+\index{rational.h@{rational.h}!rational\_to\_double@{rational\_to\_double}}
+\index{rational\_to\_double@{rational\_to\_double}!rational.h@{rational.h}}
+\doxysubsubsection{\texorpdfstring{rational\_to\_double()}{rational\_to\_double()}}
+{\footnotesize\ttfamily double rational\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrational__t}{rational\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{r }\end{DoxyParamCaption})}
+

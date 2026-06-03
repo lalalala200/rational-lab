@@ -1,0 +1,21 @@
+cppcheck --enable=all --suppress=missingIncludeSystem include/ src/ tests/
+Checking src/main.c ...
+1/3 files checked 13% done
+Checking src/rational.c ...
+2/3 files checked 83% done
+Checking tests/test_rational.c ...
+3/3 files checked 100% done
+src/rational.c:24:0: style: The function 'rational_free' is never used. [unusedFunction]
+void rational_free(rational_t *r) {
+^
+src/rational.c:52:0: style: The function 'rational_sub' is never used. [unusedFunction]
+rational_error_t rational_sub(const rational_t *a, const rational_t *b, rational_t *result) {
+^
+src/rational.c:68:0: style: The function 'rational_div' is never used. [unusedFunction]
+rational_error_t rational_div(const rational_t *a, const rational_t *b, rational_t *result) {
+^
+src/rational.c:77:0: style: The function 'rational_cmp' is never used. [unusedFunction]
+int rational_cmp(const rational_t *a, const rational_t *b) {
+^
+nofile:0:0: information: Active checkers: 106/592 (use --checkers-report=<filename> to see details) [checkersReport]
+

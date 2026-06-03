@@ -21,9 +21,6 @@ $(TEST_C): tests/test_rational.c $(TARGET)
 	mkdir -p build
 	$(CC) $(CFLAGS) -o $(TEST_C) tests/test_rational.c -Lbuild -lrational -Wl,-rpath,build
 
-test-c: $(TEST_C)
-	./$(TEST_C)
-
 run: $(APP)
 	./$(APP)
 
@@ -33,7 +30,18 @@ test-c: $(TEST_C)
 test-py: $(TARGET)
 	python3 tests/test_rational.py
 
-clean:
-	rm -rf build/
+docs-html:
+	mkdir -p docs
+	doxygen Doxyfile
 
-.PHONY: all run test-c test-py clean
+analyze:
+	cppcheck --enable=all --suppress=missingIncludeSystem include/ src/ tests/
+
+sanitize: $(TEST_C)
+	$(CC) $(CFLAGS) -fsanitize=address,undefined -o build/test_sanitize tests/test_rational.c -Lbuild -lrational -Wl,-rpath,build
+	./build/test_sanitize
+
+clean:
+	rm -rf build/ docs/ html/ reports/
+
+.PHONY: all run test-c test-py docs-html analyze sanitize clean
